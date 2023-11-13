@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Warming Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        body{
+            margin: 0;
+        padding: 0;
+        background-color:black;
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif; 
+        color: rgb(255, 255, 255); 
+        }
+    </style>
+</head>
+<body>
+    <h1>Global Warming Information</h1>
+
+    <p id="temperature">Current Global Temperature: Loading...</p>
+
+    <script>
+        // Simulate fetching data about global temperature (replace this with actual data)
+        function fetchGlobalTemperature() {
+            // This is just a placeholder value, replace it with actual temperature data
+            return Math.random() * 10 + 20;
+        }
+
+        // Update the temperature information on the webpage
+        function updateTemperature() {
+            var temperatureElement = document.getElementById('temperature');
+            var temperature = fetchGlobalTemperature().toFixed(2);
+            temperatureElement.textContent = 'Current Global Temperature: ' + temperature + ' °C';
+        }
+
+        // Update the temperature every 5 seconds (5000 milliseconds)
+        setInterval(updateTemperature, 5000);
+
+        // Initial update
+        updateTemperature();
+    </script>
+    <p>
+        Significance:
+
+        Environmental Awareness: The calculator serves as an educational tool, raising awareness about the environmental impact of individual actions. Users gain a better understanding of how their daily choices contribute to carbon emissions.
+    
+        Behavioral Change: Armed with information about their carbon footprint, users are more likely to make informed decisions that lead to positive changes in behavior. This, in turn, contributes to a broader culture of sustainability.
+
+    </p>
+</body>
+</html>

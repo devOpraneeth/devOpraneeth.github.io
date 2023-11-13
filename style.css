@@ -1,0 +1,56 @@
+body {
+        margin: 0;
+        padding: 0;
+        background-image: url(1920x1080-green-mountain-nature-1920x1080-wallpaper-preview.jpg);/
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif; 
+        color: rgb(241, 234, 234); 
+}
+.calculator {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0a140c;
+    border-radius: 10px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cba1a1;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 50%;
+    margin-left:300px;
+    padding: 10px;
+    color:rgb(0, 0, 0)
+}
+.nav-list{
+    width:50%
+    background-color: black;
+    display: flex;
+    align-items:center;
+    color:white;
+}
+.nav-list li{
+    list-style: none;
+    padding:30px 150px;
+    color:white;
+}
+.nav-list li a:hover{
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+}

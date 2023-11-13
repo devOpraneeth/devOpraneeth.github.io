@@ -4,66 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Emission Calculator</title>
-  <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-image: url(1920x1080-green-mountain-nature-1920x1080-wallpaper-preview.jpg);/
-        background-size: cover;
-        background-position: center;
-        font-family: Arial, sans-serif; 
-        color: rgb(241, 234, 234); 
-}
-
-.calculator {
-    width: 40%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #0a140c;
-    border-radius: 10px;
-}
-
-.input-container {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #cba1a1;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    width: 50%;
-    margin-left:300px;
-    padding: 10px;
-    color:rgb(0, 0, 0)
-}
-.nav-list{
-    width:50%
-    background-color: black;
-    display: flex;
-    align-items:center;
-    color:white;
-}
-.nav-list li{
-    list-style: none;
-    padding:30px 150px;
-    color:white;
-}
-.nav-list li a:hover{
-    text-decoration:none;
-    color:rgb(0, 0, 0);
-}
-  </style>
-<!--     <link rel="stylesheet" href="/style.css" type="text/css"> -->
+    <link rel="stylesheet" href="/style.css" type="text/css">
 </head>
 <body>
     <div>
@@ -72,7 +13,7 @@ button[type="submit"] {
     <nav class ="navbar">
         <ul class="nav-list">
             <li><a href="/index2.html">Home</a></li>
-            <li><a href="services">Services</a></li>
+            <li><a href="/index3.html">Temperature</a></li>
             <li><a href="contant">Contact</a></li>
             <li><a href="https://climate.nasa.gov/">About</a></li>
         </ul>
@@ -107,25 +48,6 @@ button[type="submit"] {
             <h2>Carbon Emission:</h2>
             <p id="result"></p>
         </div>
-<!--         <script src="/script.js" type="text/javascript"></script> -->
-      <script>
-        function calculateEmissions() {
-    const mode = document.getElementById('mode').value;
-    const distance = parseFloat(document.getElementById('distance').value);
-    const passengers = parseInt(document.getElementById('passengers').value);
-
-    const co2Emissions = mode === 'car' ? distance * 0.23 : mode === 'bus' ? distance * 0.06 : mode === 'train' ? distance * 0.03 : mode === 'airplane' ? distance * 0.52 : mode === 'motorcycle' ? distance * 0.12 : mode === 'bicycle' ? distance * 0.005 : mode === 'walking' ? distance * 0.0001 : 0;
-
-    const totalEmissions = co2Emissions * passengers;
-
-    document.getElementById('result').innerText = Total Carbon Emissions: ${totalEmissions.toFixed(2)} kg CO2e;
-}
-
-document.getElementById('calculator-form').addEventListener('submit', (event) => {
-    event.preventDefault();
-    calculateEmissions();
-});
-      </script>
+        <script src="/script.js" type="text/javascript"></script>
     </div>
 </body>
-</html>
