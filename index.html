@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emission Calculator</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url(1920x1080-green-mountain-nature-1920x1080-wallpaper-preview.jpg);/
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif; 
+        color: rgb(241, 234, 234); 
+}
+
+.calculator {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0a140c;
+    border-radius: 10px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cba1a1;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 50%;
+    margin-left:300px;
+    padding: 10px;
+    color:rgb(0, 0, 0)
+}
+.nav-list{
+    width:50%
+    background-color: black;
+    display: flex;
+    align-items:center;
+    color:white;
+}
+.nav-list li{
+    list-style: none;
+    padding:30px 150px;
+    color:white;
+}
+.nav-list li a:hover{
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+}
+  </style>
+<!--     <link rel="stylesheet" href="/style.css" type="text/css"> -->
+</head>
+<body>
+    <div>
+        <h1><b><center>Uncover Your Carbon Footprint and Shape a Sustainable Tomorrow!</center></b></h1>
+    </div>
+    <nav class ="navbar">
+        <ul class="nav-list">
+            <li><a href="/index2.html">Home</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="contant">Contact</a></li>
+            <li><a href="https://climate.nasa.gov/">About</a></li>
+        </ul>
+    </nav>
+    <div class="calculator">
+        <h1>CARBON EMISSION CALCULATOR</h1> 
+        <p>This Calculator Estimates Your Carbon Emissions Based On Your Transportation Mode And Distance.</p>
+        <form id="calculator-form">
+            <div class="input-container">
+                <label for="mode">MODE OF TRANSPORTATION</label>
+                <select id="mode" name="mode">
+                    <option value="car">Car</option>
+                    <option value="bus">Bus</option>
+                    <option value="train">Train</option>
+                    <option value="airplane">Airplane</option>
+                    <option value="motorcycle">Motorcycle</option>
+                    <option value="bicycle">Bicycle</option>
+                    <option value="walking">Walking</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="distance">Distance (km)</label>
+                <input type="number" id="distance" name="distance" step="0.01">
+            </div>
+            <div class="input-container">
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1">
+            </div>
+            <button type="submit"><b>Calculate</b></button>
+        </form>
+        <div class="result-container">
+            <h2>Carbon Emission:</h2>
+            <p id="result"></p>
+        </div>
+<!--         <script src="/script.js" type="text/javascript"></script> -->
+      <script>
+        function calculateEmissions() {
+    const mode = document.getElementById('mode').value;
+    const distance = parseFloat(document.getElementById('distance').value);
+    const passengers = parseInt(document.getElementById('passengers').value);
+
+    const co2Emissions = mode === 'car' ? distance * 0.23 : mode === 'bus' ? distance * 0.06 : mode === 'train' ? distance * 0.03 : mode === 'airplane' ? distance * 0.52 : mode === 'motorcycle' ? distance * 0.12 : mode === 'bicycle' ? distance * 0.005 : mode === 'walking' ? distance * 0.0001 : 0;
+
+    const totalEmissions = co2Emissions * passengers;
+
+    document.getElementById('result').innerText = Total Carbon Emissions: ${totalEmissions.toFixed(2)} kg CO2e;
+}
+
+document.getElementById('calculator-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    calculateEmissions();
+});
+      </script>
+    </div>
+</body>
+</html>
